@@ -237,18 +237,18 @@
         // More info https://github.com/hakimel/reveal.js#dependencies
         dependencies: [
             {
-                src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function () {
+                src: './plugin/highlight/highlight.js', async: true, callback: function () {
                     hljs.initHighlightingOnLoad();
                 }
             },
             // Interpret Markdown in <section> elements
             {
-                src: '../reveal/plugin/markdown/marked.js', condition: function () {
+                src: './plugin/markdown/marked.js', condition: function () {
                     return !!document.querySelector('[data-markdown]');
                 }
             },
             {
-                src: '../reveal/plugin/markdown/markdown.js', condition: function () {
+                src: './plugin/markdown/markdown.js', condition: function () {
                     return !!document.querySelector('[data-markdown]');
                 }
             },
