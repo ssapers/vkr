@@ -79,6 +79,8 @@
                 <div>
 
                     <img src="img/6.png" alt="" style="border: none; box-shadow: none; ">
+                    <p style="font-size: .6em; text-align: left"><b>I</b> – коэффициент избыточности; <br>
+                        <b>K</b> – коэффициент затрат на менеджера за выполненную работу.</p>
 
                 </div>
                 <img src="img/5.png" alt="" style="border: none; box-shadow: none;margin-left: 4%;
@@ -92,9 +94,12 @@
         </section>
         <section>
             <h4>Методы анализа и оптимизации</h4>
+            <img src="img/24.png" alt="" style="border: none; box-shadow: none; ">
             <div style="display: flex; justify-content: space-between">
+
                 <div>
                     <img src="img/7.png" alt="" style="border: none; box-shadow: none; ">
+
 
                 </div>
                 <img src="img/8.png" alt=""
@@ -180,6 +185,10 @@
                 <h4>Экранные формы</h4>
                 <img src="img/20.png" alt="" style="border: none; box-shadow: none;">
             </div>
+
+        </section>
+        <section data-background-video="img/11">
+
         </section>
         <section>
             <div>
@@ -229,30 +238,16 @@
         progress: true,
         history: true,
         center: true,
-        minScale: 0.2,
-        maxScale: 1.5,
-
-        transition: 'none', // none/fade/slide/convex/concave/zoom
-
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
         // More info https://github.com/hakimel/reveal.js#dependencies
         dependencies: [
-            {
-                src: './plugin/highlight/highlight.js', async: true, callback: function () {
-                    hljs.initHighlightingOnLoad();
-                }
-            },
-            // Interpret Markdown in <section> elements
-            {
-                src: './plugin/markdown/marked.js', condition: function () {
-                    return !!document.querySelector('[data-markdown]');
-                }
-            },
-            {
-                src: './plugin/markdown/markdown.js', condition: function () {
-                    return !!document.querySelector('[data-markdown]');
-                }
-            },
-
+            { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: './plugin/search/search.js', async: true },
+            { src: './plugin/zoom-js/zoom.js', async: true },
+            { src: './plugin/notes/notes.js', async: true }
         ]
     });
 </script>
